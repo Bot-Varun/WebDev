@@ -1,0 +1,408 @@
+@import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&display=swap');
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    color: aliceblue;
+}
+.wrapper{
+    position: relative;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+a{
+    text-decoration: none;
+    color: aliceblue;
+}
+.searchInput{
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0,0,0,0.4);
+    z-index: -2;
+
+    input{
+        position: absolute;
+        height: 4.5vh;
+        width: 70vw;
+        z-index: 1;
+        top: 2vh;
+        left: 10vw;
+        border-radius: 5vh;
+        padding-left: 1vw;
+        font-size: 2.5vh;
+    }
+}
+
+
+header{
+    margin: 0;
+    position:absolute;
+    height: 16vh;
+    width: 100%;
+    color:#f1f1f1;
+    z-index: 1;
+
+    .filler{
+        margin: 0;
+        position:relative;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        background-color: transparent;
+
+        .items{
+            height: 4vh;
+            width: 100%;
+            background-color: transparent;
+            display: flex;
+            justify-content: space-between;
+            margin-inline: 3vw;
+            margin-top: 1.5vh;
+
+            .start,.end,#search{
+                z-index: 3;
+            }
+            #search{
+                cursor: pointer;
+            }
+            .start{
+                transition: .35s;
+            }
+
+            .end button{
+                margin-inline: .35vw;
+            }
+
+            button a,div{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            button{
+                background-color: transparent;
+                border: none;
+                border-radius: 50%;
+                height: 3.5em;
+                width: 3.5em;
+            }
+            button:hover{
+                background-color: rgba(0,0,0,0.4);
+            }
+        }
+
+        .logo{
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Comforter Brush', cursive;
+            font-size: 42px;
+            top:1.5vh;
+        }
+
+        .nav1{
+            position: absolute;
+            margin: 4em;
+            top: 3vh;
+            
+
+            a{
+                margin-inline: 2.25vw;
+                padding:5px;
+                padding-inline: 2vw;
+            }
+            a:hover{
+                border-bottom: 2px solid #f1f1f1;
+            }
+            #home{
+                border-bottom: 2px solid #f1f1f1;
+            }
+        }
+    }
+}
+
+
+/* header{
+    font-size:medium;
+    position: absolute;
+    width: 100%;
+    height: 16vh;
+
+    #inputSearch{
+        position: absolute;
+        margin-top: 2vh;
+        margin-left: 8vw;
+        z-index: -1;
+        height: 3vh;
+        width: 40vw;
+        font-size: 2vh;
+        visibility: hidden;
+    }
+
+    .items{
+        position:absolute;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 7vh;
+        width: 100%;
+
+        #logoShare,#search {
+            padding-top:1.25em;
+            padding-left:1em;
+            padding-right:1.5em;
+            margin-inline: 3em;
+            cursor: pointer;
+            z-index: 2;
+        }
+        #search a{
+            padding: 1.25em .6em .3em .6em;
+            border-radius: 50%;
+            transition: .4s;
+        }
+        
+        #logoShare a{
+            margin-left: .8vw;
+            padding: 1.25em .6vw .3em .6em;
+            transition: .4s;
+            border-radius: 50%;
+        }
+        a:hover{
+            background-color: rgba(0,0,0,0.4);
+        }
+        
+        .spaceLeft{
+            padding-left: .25vw;
+        }
+
+        .logoSize{
+            height: 25px;
+            width: 25px;
+        }
+    }
+    .logoMid{
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top:-24px;
+        width: 100%;
+        font-family: 'Comforter Brush', cursive;
+        font-size: 24px;
+    }
+    .nav1{
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        transform: translate(0,10vh);
+        transition: .5s;
+        
+        
+        a{
+            margin: auto 0;
+            width: 12%;
+            text-decoration: none;
+            color: rgb(252, 253, 255);
+            display: flex; 
+            justify-content: space-around;
+        }
+        #home{
+            border-bottom:2px solid #fff;
+        }
+        #store:hover{
+            border-bottom:2px solid #f1f1f1;
+        }
+        #faq:hover{
+            border-bottom:2px solid #f1f1f1;
+        }
+        #contactUs:hover{
+            border-bottom:2px solid #f1f1f1;
+        }
+    }
+}
+*/
+/*  -------------------------------------------------  Page 1  -----------------------------------------------  */
+
+.box1{
+    font-family:'Comforter Brush', cursive;
+    width:auto;
+    height:100vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background: url("https://s3-alpha-sig.figma.com/img/44d1/177a/8bf2d34e9ee4a6348c675eb4513bdbce?Expires=1704672000&Signature=SRxF7iQClLUALrvwrNbM7HxLqojBsi9ZrY7s92WkeR9z0VN74g8M2Bq0Y8GtCHP~nJe6shY7SbojXdGPQ~ec8Bi9kjq1qRkWooU9sksrw5paO1DRWa-ZW~FCG--AXalWPwmgOCf5iI~IZ-6XUkEuKhtu4juei~3~OvUrhASgCimGn4BiZ0NHfzsciQXub8suXd7tT86QqT~cgrcHgKNNBTJ-GIaRGPe2Tn1wL-eP3EVcWpTmCqT5Rcle0~fNZZBj1n78FC87Sfp87KjW4TibHcYAXaSl0OfzB91HqGeJLBPzYmVSQ7xaQG1x5NvdXFeuG0zQh43AVVSO~Bu6-3k2kg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(0, 0, 0);
+    background-blend-mode:luminosity;
+    background-attachment: fixed;
+
+    .img1{
+        height: 80vh;
+        width: 57.5%;
+        background-image: url("https://s3-alpha-sig.figma.com/img/0c2f/8de5/78ef0c5270f9aadac240e0bebe04b037?Expires=1704672000&Signature=cyGEz5nGlY3GFvm-Xj5oPLvmCz4V3T258l07nI5nrKRJn3bIziKkVCupdYReI2RUAMcQFcHnBmlF67x7QAarOPE4f1knmGnPeKUEYHtmqiUB-ThxtNtbqAazPMROYKiYj9M2Q4LjsFWtQqvwzqHsw9on-dm~aw9mK~~zRV9hQZGIQ~Qw~wZsB06NA8nHmOj2fC3ho87QlPyzWeMwhOd3Exl5cboW9rywB6d8JRFlmSVnZm1aRP4zBWsXL08WrtwNkbXD1VljJxEz83hb~u1udDffhe-E9GZDYQsrVXbrh5DksdGkJe5k4TnBt3gzWDFFdGdasQjkgVG2UpG-GOhZgQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
+        background-position:center bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    #i1{
+        position: absolute;
+        bottom: 0;
+    }
+    .h1{
+        font-size: 110px;
+    }
+    .h2{
+        font-size: 45px;
+    }
+    .h1,.h2{
+        position: absolute;
+        letter-spacing: .1vw;
+
+        span{
+            color:transparent;
+            -webkit-text-stroke: .65px #fff;
+        }
+        
+    }
+    .topRight{
+        right: 15vh;
+        top: 12vh;
+    }
+    .bottomLeft{
+        left: 10vh;
+    }
+    .textCenter{
+        top:30vh;
+    }
+}
+
+/*  -------------------------------------------------  Page 2  -----------------------------------------------  */
+
+.box2{
+    width:auto;
+    height:100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: url("https://s3-alpha-sig.figma.com/img/a0ea/3cd7/9b9c05a68dde2662ed4fac99f16c1d5d?Expires=1704672000&Signature=DQnNYeHr34kpgjBntsjcbaKuoN3X5togluQPftuRUPjqAzXWymN4MCxidYfXiXWQZXOTcHI~WvnoG2Xp8sy7-yTetSOdbBcLg7v8oPixjfzqWyy~bYKzgrYW1R5H8TzNDEGgFAOB-Jj10AEolrRJXaHSi8R4Sxdmzw4fFP-O1KbcGrdRY8GoULxrm5ORULlXU7WeDrJRVkZSmMdNElGTwAO7VG3SCrXXNNDidDCRYvzpLWu28c2ym2c6dovU6PU6vuK7xo5-5ofku1a1UWb2OJVYQkdiwISb5Zk5Ycrfgsd14TIe6k7BdwqoN1H4vMKXF3Fx18yc878WeqCYy0kdrg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(0, 0, 0);
+    background-blend-mode:luminosity;
+    background-attachment: fixed;
+
+    .img2{
+        position: absolute;
+        background: url("https://s3-alpha-sig.figma.com/img/9e11/5854/6399ff8c543450b966b15f3b58c5eaa6?Expires=1704672000&Signature=bPL9qguowgKJhfvFsL2m1ExmVZo2vtL5XjceAPobb2haQ0o9to-5tJ0VRxawT9VNPX6eowkLoCxh11SlJDr4~4JIBphi-Dg1tM1Ybby~mj2yHM4I0xgfKqVNil5oOdFOBxxoiV759358KYFsqnp5HwRY9kV4VsX4eozBtIwX68PkPw4Xkjt~IX~Wp3shHP~HuvB62jqUgIAKuS6nxZpkDvA~42Fl7KNdFhYQrYitRm4mbtefCxh00PL9OmmYvs-Gv65iGq9DUON9edU4fmIim5keuFR4GzS4VDcGrl9kYeEmCSZkX-WiICALNoNSYo7KUH5kITzCqM3mBSfqubt3wg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
+        background-repeat: no-repeat;
+        background-size: cover;
+        object-fit: cover;
+        background-position: center;
+        height: 70vh;
+        width:40vw;
+        left:5vw;
+    }
+    .dark{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(rgba(0, 0, 0, 0.75),rgba(0, 0, 0, 0.75));
+    }
+    .textbox2{
+        width:40%;
+        position: relative;
+        font-size: 21px;
+        left: 50vw ;
+    }
+}
+
+/*  ---------------------------------------------  Page 3  ---------------------------------------------  */
+
+.box3{
+    width:auto;
+    height:100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-image: url("https://s3-alpha-sig.figma.com/img/a0ea/3cd7/9b9c05a68dde2662ed4fac99f16c1d5d?Expires=1704672000&Signature=DQnNYeHr34kpgjBntsjcbaKuoN3X5togluQPftuRUPjqAzXWymN4MCxidYfXiXWQZXOTcHI~WvnoG2Xp8sy7-yTetSOdbBcLg7v8oPixjfzqWyy~bYKzgrYW1R5H8TzNDEGgFAOB-Jj10AEolrRJXaHSi8R4Sxdmzw4fFP-O1KbcGrdRY8GoULxrm5ORULlXU7WeDrJRVkZSmMdNElGTwAO7VG3SCrXXNNDidDCRYvzpLWu28c2ym2c6dovU6PU6vuK7xo5-5ofku1a1UWb2OJVYQkdiwISb5Zk5Ycrfgsd14TIe6k7BdwqoN1H4vMKXF3Fx18yc878WeqCYy0kdrg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: rgb(0, 0, 0);
+    background-attachment:fixed;
+
+    .img3{
+        position: absolute;
+        background: url("https://s3-alpha-sig.figma.com/img/03e6/3b2e/f2a963bb06a292cd0eca6a147b2894f6?Expires=1704672000&Signature=YlJXtTL2rRBDseYrFh5qcYL7Fq1ZY7m-OzpFpsusNf4bZpR8wHvLc9Z9ed73c1n8lzqhSG7MYLR~umdqBsnpIw6HniaoYzANpsT2TsocUS0rokdViNWsYv0~kaFbs6EVbzA0lE1zBshrxW38K8zxBy9Zqc7YsuwKWlMEeTw-qDZN7Bj1BtjYV2aRxWCQrS36Jr-opkCIVDJ5f5bSHN91ARGpYZ74rq22UUkHintqbuRNC48b-O2RHm5r98a2pan059YmlJu95iQVuzOft02PTSjZkz5VNGi1f6r8E~g7ZICIB~pUtqafiSP3pNqiqlesNHkECoIUy-PI5SfYYbHw8w__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
+        background-repeat: no-repeat;
+        background-size: cover;
+        object-fit: cover;
+        background-position: center;
+        height: 70vh;
+        width:40vw;
+        right: 5vw;
+    }
+    .textbox3{
+        position: absolute;
+        text-align: center;
+        font-size:21px;
+        height: 70vh;
+        width: 40vw;
+        z-index: 2;
+        top: 32.5vh;
+        left: 5vw;
+    }
+}
+
+/*  -----------------------------------------------  page-4  -------------------------------------------------  */
+
+.box4{
+    width:auto;
+    height:100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url("https://s3-alpha-sig.figma.com/img/ca8b/659d/49051492d68d94035fc97fc022a0b68a?Expires=1704672000&Signature=kf-HPPEmIxlIK8xl2Zxyf1heHOOfZf4mKEe0nNhsED4gWANNxwSXQ42FISPTJgKlZxCE2UaE93QqRAHXgQnJVyq9OzveV8~6Ukd~alMFFmJtevFQng72s6esOLBZamV7-O0Zssbyrr0QCS4g9h5q2Zp42N14wRfuyyS~X0pt2TJuGYBD2~hGk7uVUEt8mQtADhBV2-MwZQdCI88JgkQzaH60c-zN2LyWe5YSmgt9S9ivqPfcNGxOo8vKyWUwzEnszl0tKrF-aI~lUT8mla~da62JsWGI7iuuHFPObl2DsGqcFMCJJQ6GAtDc6uHkoTnpfv0WYlfFfW5vnNWcWy85MQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    .light{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.4) 65%,rgba(0,0,0,0.8));
+    }
+    .textbox4{
+        width: 45vw;
+        height: 38vh;
+        font-size:21px;
+        text-align: center;
+        z-index: 2;
+    }
+    h1{
+        font-size: 31px;
+    }
+    p{
+        padding-top: 5vh;
+    }
+    #button1{
+        z-index: 1;
+        background-color: rgb(240,240,240);
+        width: 14vw;
+        height: 7vh;
+        letter-spacing: 2.25px;
+        border-radius: 25px;
+        font-size: 25px;
+        font-weight: 600;
+        cursor: pointer;
+    }
+    #button1:hover{
+        background-color: rgb(186, 186, 186);
+    }
+}
