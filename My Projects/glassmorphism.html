@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glass Style</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            width: 100%;
+            background:url(https://i.pinimg.com/564x/71/9e/80/719e80760999b4c355a723224120eb07.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: grid;
+            place-items: center;
+        }
+        .glass{
+            height: 30rem;
+            width: 50rem;
+            background: linear-gradient(rgba(255,255,255,.1),rgba(255, 255, 255,0));
+            backdrop-filter: blur(10px);
+            box-shadow: 0px 10px 35px 0 rgba(0,0,0,.25);
+            border-radius: 45px;
+        }
+    </style>
+</head>
+<body>
+    <div class="glass"></div>
+</body>
+</html>

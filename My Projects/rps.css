@@ -1,0 +1,199 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+    color: rgb(20, 20, 20);
+}
+
+body{
+    width: 100%;
+    height:100vh;
+    display:block;
+    transition: all 0.75s;
+    background-color: rgb(20, 20, 20);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.rectangle{
+    height: 20vh;
+    width: 50vh;
+    background-color: rgba(0, 140, 255,0.75);
+    position: relative;
+    display: block;
+    margin: 0vh 20vh;
+    border-radius: 15px 20px 20px 15px;
+    border:3px solid rgba(27, 227, 117,0);
+    box-shadow: 2px 1px 30px rgba(85, 253, 161,0);
+    cursor: pointer;
+}
+
+.rectangle:hover{
+    transition: 0.37s ease-out;
+    background-color: rgb(23, 150, 254);
+    border:3px solid rgba(27, 227, 117,01);
+    box-shadow: 2px 1px 30px rgba(85, 253, 161,1);
+}
+
+.r1{
+    transform:translate(5vh , 10vh);
+}
+
+.r2{
+    transform:translate(5vh , 0vh);
+}
+
+.r3{
+    transform:translate(5vh, 0vh);
+}
+
+.select{
+    height: 9vh;
+    width: 9vh;
+    border-radius: 50%;
+    background-color: rgba(255, 145, 0);
+    position: relative;
+    margin: 0vh 20vh;
+    cursor: pointer;
+}
+
+.rock{
+    background-color: rgba(255, 145, 0);
+    z-index: inherit;
+    position:relative;
+    border: 5px solid rgb(20, 20, 20);
+    margin-top: 10vh;
+    transform:translate(0.5vh , -14.5vh);
+}
+
+.paper{
+    background-color: rgba(255, 145, 0);
+    transition: 0.8s;
+    position:relative;
+    transform: translate(0,25vh);
+    border: 5px solid rgb(20, 20, 20);
+    transform:translate(0.5vh , -14.5vh);
+}
+
+.scissor{
+    background-color: rgb(255, 145, 0);
+    transition: 0.8s;
+    position:absolute;
+    transform: translate(0,50vh);
+    border: 5px solid rgb(20, 20, 20);
+    transform:translate(0.5vh , -14.5vh);
+}
+
+.computer{
+    position: absolute;
+    right: 0;
+    top: 39vh;
+}
+
+.r4, .box{
+    color: rgb(20, 20, 20);
+    font-size: 20px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.c{
+    text-shadow: 2.2px 2.2px 5px rgb(20, 20, 20), -.1px -.1px 2px rgb(20, 20, 20);
+    font-size: 30px;
+}
+
+.r4{
+    background-color: rgb(0, 140, 255);
+    cursor: auto;
+    box-shadow: none;
+}
+
+.rSpan{
+    background-color: transparent;
+}
+
+.c1{
+    position:inherit;
+    right:-4vh;
+    top:5vh;
+    border: 5px solid rgb(20, 20, 20);
+}
+
+/* .................................................................. */
+
+.display1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10vh);
+    transform:translate(8rem,-58.5rem);
+    height: 45rem;
+    width: 82rem;
+    background: linear-gradient(rgba(255,255,255,.15),rgba(255, 255, 255,0.05));
+    backdrop-filter: blur(10px);
+    box-shadow: 5px 5px 65px 0 rgba(0,0,0,.8), -15px -15px 5px 0 rgba(255,255,255,.2), ;  
+    border-radius: 15px;
+    font-size: 80px;
+    visibility: visible;
+}
+
+.rSpan1{
+    background-color: transparent;
+}
+
+.play{
+    background-color: rgb(87, 177, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 40px auto 0 auto;
+    height: 8vh;
+    width: 40vh;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+.play:hover{
+    background-color: rgb(216, 233, 253);
+    border: 2px solid rgba(85, 253, 161,1);
+    box-shadow: 2px 1px 30px rgba(85, 253, 161,1)
+
+}
+
+/* .................................................................. */
+
+.display2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    height: 17.5rem;
+    width: 30rem;
+    background-color: rgb(25, 232, 222);
+    transform: translate(70vh, -55vh);
+    border-radius: 8px;
+    font-size: xx-large;
+    visibility: hidden;
+}
+
+.playAgain{
+        background-color: transparent;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 40px auto 0 auto;
+        height: 5vh;
+        width: 20vh;
+        cursor: pointer;
+        border-radius: 22px;
+}

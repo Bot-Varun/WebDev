@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+       <title>Rock Paper Scissor</title>
+       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+       <link rel="stylesheet" href="rps.css"/>
+       <meta charset="UTF-8" />
+    </head>
+    <body>
+        <!--  All User Inputs  -->
+        <div class="container">
+            <button class="rockChoose rectangle r1 box" id="rock-box"> Choose Rock </button>
+            <button class="rockChoose select rock c" id="rock-box" >✊</button>
+            <button class="paperChoose rectangle r2 box" id="paper-box" role="button" > Choose Paper </button>
+            <button class="paperChoose select paper c" id="paper-box" >✋</button>
+            <button class="scissorChoose rectangle r3 box" id="scissor-box" > Choose Scissor </button>
+            <button class="scissorChoose select scissor c" id="scissor-box">✌</button>
+        </div>
+
+        <!--  Right aligned Computer  -->
+        <div class="computer"> 
+            <button class="access rectangle r4" >Rock Paper Scissor Game <span class="rSpan r4" >Lets Play!!!</span></button>
+            <button class="access select c1" role="button" >Computer</button>
+        </div>
+
+        <!--  For Displaying Results  -->
+        <div id="display2" class="display2">
+            <p class="dis2" id="dis2" style="background-color: transparent;"></p>
+            <Button type="button" class="playAgain" id="playAgain" onclick="display2.style.visibility='hidden';">Play Again</Button>
+        </div>
+
+        <!--  For Displaying Start Menu  -->
+        <div id="display1" class="display1"> 
+            <p class="rSpan1"><span class="rSpan1">✊ ✋ ✌</span><button id="play" class="play" onclick="display1.style.visibility='hidden';" >Play Game!</button></p>
+        </div>
+
+        <!--        JAVA SSCRIPT         -->
+        <script src="rps.js"></script>
+    </body>
+</html>
